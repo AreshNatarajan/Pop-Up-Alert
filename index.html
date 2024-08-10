@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="popup">
+      <h2>Hi , Pop Up Is Work</h2>
+      <div onclick="popup()" class="btnok">OK</div>
+    </div>
+    <div class="on">
+      <div onclick="popup()" class="btn">Click</div>
+    </div>
+
+    <script>
+      var popupbox = document.getElementsByClassName("popup")[0];
+      var ClickButton = document.getElementsByClassName("on")[0];
+      function popup(params) {
+        {
+          popupbox.style.display === "flex"
+            ? setTimeout(() => {
+                popupbox.style.display = "none";
+                ClickButton.style.display = "flex";
+              }, 300)
+            : (popupbox.style.display = "flex");
+          ClickButton.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
